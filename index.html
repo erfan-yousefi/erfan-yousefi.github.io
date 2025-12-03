@@ -7,127 +7,190 @@
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f7f7;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
       color: #333;
+      overflow-x: hidden;
     }
+
+    /* Smooth Fade */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 1s ease forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     header {
       text-align: center;
-      padding: 80px 20px;
+      padding: 120px 20px;
+      background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+      color: white;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
+
     h1 {
-      font-size: 48px;
+      font-size: 56px;
       margin-bottom: 10px;
+      font-weight: 800;
+      letter-spacing: -1px;
     }
+
     p.subtitle {
-      color: #666;
-      font-size: 18px;
-      max-width: 600px;
+      opacity: 0.9;
+      font-size: 20px;
+      max-width: 650px;
       margin: 0 auto;
     }
+
     .btns {
-      margin-top: 25px;
+      margin-top: 30px;
     }
+
     .btn {
       display: inline-block;
-      padding: 12px 24px;
-      margin: 5px;
-      border-radius: 12px;
-      border: 2px solid #333;
+      padding: 14px 28px;
+      margin: 8px;
+      border-radius: 14px;
+      border: none;
       background: white;
-      cursor: pointer;
-      text-decoration: none;
       color: #333;
       font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(255,255,255,0.4);
+      transition: 0.25s;
     }
+    .btn:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 22px rgba(255,255,255,0.6);
+    }
+
     section {
       max-width: 1100px;
       margin: 40px auto;
       padding: 20px;
     }
+
     .card {
       background: white;
-      padding: 25px;
-      border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin-bottom: 20px;
+      padding: 30px;
+      border-radius: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: 0.25s;
     }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 26px rgba(0,0,0,0.18);
+    }
+
     h2 {
-      margin-top: 0;
-      font-size: 28px;
+      font-size: 32px;
+      margin-bottom: 15px;
     }
+
+    h3 {
+      font-size: 22px;
+      margin: 0;
+    }
+
     ul.skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 10px;
       list-style: none;
       padding: 0;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 8px;
     }
+
+    .skill-box {
+      padding: 10px 15px;
+      background: #f0f0f0;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: 600;
+      transition: 0.25s;
+    }
+    .skill-box:hover {
+      background: #e0e0e0;
+      transform: translateY(-3px);
+    }
+
     footer {
       text-align: center;
-      color: #777;
-      padding: 40px 0;
-      margin-top: 50px;
+      padding: 50px 0;
+      color: #666;
+      font-size: 15px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
-  <header>
+
+  <header class="fade">
     <h1>Erfan Yousefi</h1>
     <p class="subtitle">Backend Developer • ASP.NET Core • Software Engineer • Machine Learning Enthusiast</p>
     <div class="btns">
-      <a class="btn" href="https://www.linkedin.com/in/erfan-yousefi">Linkedin</a>
-      <a class="btn" href="mailto:Erfan.yousefi@fau.de">Contact Me</a>
+      <a class="btn" href="#">Download CV</a>
+      <a class="btn" href="#">Contact Me</a>
     </div>
   </header>
 
   <section>
-    <div class="card">
+    <div class="card fade">
       <h2>About Me</h2>
       <p>
-        I am a backend developer with hands-on experience in ASP.NET Core, clean architecture,
-        and building efficient systems. I have worked on academic, enterprise, and commercial
-        projects including HIS platforms, banking modules, and LMS systems.
+        I am a backend developer with strong experience in ASP.NET Core, clean architecture, modular design,
+        SQL Server optimization, and scalable project structures. I have worked on enterprise banking modules,
+        LMS systems, HIS platforms, and commercial-level websites.
       </p>
     </div>
 
-    <div class="card">
+    <div class="card fade">
       <h2>Skills</h2>
       <ul class="skills">
-        <li>ASP.NET Core</li>
-        <li>C#</li>
-        <li>Clean Architecture</li>
-        <li>SQL Server</li>
-        <li>API Design</li>
-        <li>JavaScript / TypeScript</li>
-        <li>Git & CI/CD</li>
-        <li>Machine Learning Basics</li>
+        <li><div class="skill-box">ASP.NET Core</div></li>
+        <li><div class="skill-box">C#</div></li>
+        <li><div class="skill-box">Clean Architecture</div></li>
+        <li><div class="skill-box">SQL Server</div></li>
+        <li><div class="skill-box">API Design</div></li>
+        <li><div class="skill-box">JavaScript / TS</div></li>
+        <li><div class="skill-box">Git & CI/CD</div></li>
+        <li><div class="skill-box">Machine Learning</div></li>
       </ul>
     </div>
 
-    <h2 style="margin-top:40px; text-align:center;">Experience</h2>
+    <h2 class="fade" style="text-align:center; margin-top:50px;">Experience</h2>
 
-    <div class="card">
+    <div class="card fade">
       <h3>Backend Developer – Dolphin Company</h3>
       <p><strong>2022 – 2024</strong></p>
       <p>Worked on RespinaTalk LMS and multiple commercial platforms including an online clothing store.</p>
     </div>
 
-    <div class="card">
+    <div class="card fade">
       <h3>IT Specialist & Developer – Petro Pala Toos</h3>
       <p><strong>2021 – 2022</strong></p>
       <p>Developed internal tools, optimized systems, and supported enterprise infrastructure.</p>
     </div>
 
-    <div class="card">
+    <div class="card fade">
       <h3>Software Developer – Farapardazan Arvand Omid (Bank Sepah PSP)</h3>
       <p><strong>2024</strong></p>
-      <p>Developed module-based components including file manager and CMS inside banking frameworks.</p>
+      <p>Developed module-based components including a file manager and CMS for banking frameworks.</p>
     </div>
   </section>
 
   <footer>
     © 2025 Erfan Yousefi — All Rights Reserved
   </footer>
+
 </body>
 </html>
