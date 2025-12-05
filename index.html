@@ -1,196 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Erfan Yousefi - Portfolio</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ece9e6, #ffffff);
-      color: #333;
-      overflow-x: hidden;
-    }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="/assets/Stylesheets/Main.css">
+<link rel="stylesheet" href="/assets/Stylesheets/Nav.css">
+<link rel="stylesheet" href="/assets/Stylesheets/Toggle.css">
+<title>Erfan — Portfolio</title>
 
-    /* Smooth Fade */
-    .fade {
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeIn 1s ease forwards;
-    }
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
 
-    header {
-      text-align: center;
-      padding: 120px 20px;
-      background: linear-gradient(135deg, #3a7bd5, #00d2ff);
-      color: white;
-      border-bottom-left-radius: 60px;
-      border-bottom-right-radius: 60px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
+<!-- ScrollReveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
 
-    h1 {
-      font-size: 56px;
-      margin-bottom: 10px;
-      font-weight: 800;
-      letter-spacing: -1px;
-    }
-
-    p.subtitle {
-      opacity: 0.9;
-      font-size: 20px;
-      max-width: 650px;
-      margin: 0 auto;
-    }
-
-    .btns {
-      margin-top: 30px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 28px;
-      margin: 8px;
-      border-radius: 14px;
-      border: none;
-      background: white;
-      color: #333;
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-      box-shadow: 0 6px 18px rgba(255,255,255,0.4);
-      transition: 0.25s;
-    }
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 22px rgba(255,255,255,0.6);
-    }
-
-    section {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 20px;
-      margin-bottom: 25px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      transition: 0.25s;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 26px rgba(0,0,0,0.18);
-    }
-
-    h2 {
-      font-size: 32px;
-      margin-bottom: 15px;
-    }
-
-    h3 {
-      font-size: 22px;
-      margin: 0;
-    }
-
-    ul.skills {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 10px;
-      list-style: none;
-      padding: 0;
-    }
-
-    .skill-box {
-      padding: 10px 15px;
-      background: #f0f0f0;
-      border-radius: 12px;
-      text-align: center;
-      font-weight: 600;
-      transition: 0.25s;
-    }
-    .skill-box:hover {
-      background: #e0e0e0;
-      transform: translateY(-3px);
-    }
-
-    footer {
-      text-align: center;
-      padding: 50px 0;
-      color: #666;
-      font-size: 15px;
-      margin-top: 60px;
-    }
-  </style>
 </head>
+
 <body>
 
-  <header class="fade">
-    <h1>Erfan Yousefi</h1>
-    <p class="subtitle">Backend Developer • ASP.NET Core • Software Engineer • Machine Learning Enthusiast</p>
-    <div class="btns">
-      <a class="btn" href="#">Download CV</a>
-      <a class="btn" href="#">Contact Me</a>
+<!-- Theme toggle with SVG moon/sun -->
+<div class="theme-toggle">
+  <span id="theme-icon"></span>
+  <label class="switch">
+    <input type="checkbox" id="themeSlider">
+    <span class="slider"></span>
+  </label>
+</div>
+
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certificates">Certificates</a></li>
+  </ul>
+</nav>
+
+<section id="home">
+  <!-- <center> -->
+    <img src="/assets/img/Profile.jpg" class="profile-pic" />
+    <h1 style="margin-top:20px;">Hi, I'm Erfan 👋</h1>
+    <p style="margin-top:10px; max-width:600px; font-size:18px; line-height:1.6;">
+      Backend Developer • Machine Learning Enthusiast • ASP.NET Core Specialist
+    </p>
+    <a href="resume.pdf" class="resume-btn" download>Download Resume (PDF)</a>
+  <!-- </center> -->
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+  <div class="card">
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Dolphin Company — Backend Developer</h3>
+        <p>Worked on RespinaTalk LMS, backend architecture with C# and ASP.NET Core.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>Petro Pala Toos — IT Specialist</h3>
+        <p>System admin + internal development tools.</p>
+      </div>
+      <div class="timeline-item">
+        <h3>FaraPardazan Arvand Omid — Developer</h3>
+        <p>CMS modules, file manager, banking PSP software.</p>
+      </div>
     </div>
-  </header>
+  </div>
+</section>
 
-  <section>
-    <div class="card fade">
-      <h2>About Me</h2>
-      <p>
-        I am a backend developer with strong experience in ASP.NET Core, clean architecture, modular design,
-        SQL Server optimization, and scalable project structures. I have worked on enterprise banking modules,
-        LMS systems, HIS platforms, and commercial-level websites.
-      </p>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="card">C#, ASP.NET Core, REST API</div>
+    <div class="card">Python (OpenCV, ML Basics)</div>
+    <div class="card">SQL Server, Database Design</div>
+    <div class="card">Clean Architecture, Git</div>
+  </div>
+</section>
+
+<section id="certificates">
+  <h2>Certificates</h2>
+  <div class="card cert-card" 
+       data-img="/assets/img/cert-C#.jpg" 
+       data-title="Microsoft SQL Server – Advanced">
+    Microsoft SQL Server – Advanced
+  </div>
+
+  <div class="card cert-card" 
+       data-img="cert-ml.jpg" 
+       data-title="Machine Learning Foundations">
+    Machine Learning Foundations
+  </div>
+
+  <div class="card cert-card" 
+       data-img="cert-aspnet.jpg" 
+       data-title="ASP.NET Development Course">
+    ASP.NET Development Course
+  </div>
+</section>
+
+<!-- Modal for certificates -->
+<div id="certModal" class="modal" aria-hidden="true">
+  <div class="modal-overlay"></div>
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="certModalTitle">
+    <div class="modal-header">
+      <div id="certModalTitle" class="modal-title">Certificate</div>
+      <button class="modal-close" aria-label="Close certificate view">&times;</button>
     </div>
-
-    <div class="card fade">
-      <h2>Skills</h2>
-      <ul class="skills">
-        <li><div class="skill-box">ASP.NET Core</div></li>
-        <li><div class="skill-box">C#</div></li>
-        <li><div class="skill-box">Clean Architecture</div></li>
-        <li><div class="skill-box">SQL Server</div></li>
-        <li><div class="skill-box">API Design</div></li>
-        <li><div class="skill-box">JavaScript / TS</div></li>
-        <li><div class="skill-box">Git & CI/CD</div></li>
-        <li><div class="skill-box">Machine Learning</div></li>
-      </ul>
+    <div class="modal-body">
+      <img id="certModalImg" src="" alt="Certificate preview" />
     </div>
-
-    <h2 class="fade" style="text-align:center; margin-top:50px;">Experience</h2>
-
-    <div class="card fade">
-      <h3>Backend Developer – Dolphin Company</h3>
-      <p><strong>2022 – 2024</strong></p>
-      <p>Worked on RespinaTalk LMS and multiple commercial platforms including an online clothing store.</p>
-    </div>
-
-    <div class="card fade">
-      <h3>IT Specialist & Developer – Petro Pala Toos</h3>
-      <p><strong>2021 – 2022</strong></p>
-      <p>Developed internal tools, optimized systems, and supported enterprise infrastructure.</p>
-    </div>
-
-    <div class="card fade">
-      <h3>Software Developer – Farapardazan Arvand Omid</h3>
-      <p><strong>2024</strong></p>
-      <p>Developed module-based components including a file manager and CMS for banking frameworks.</p>
-    </div>
-  </section>
-
-  <footer>
-    © 2025 Erfan Yousefi — All Rights Reserved
-  </footer>
-
+  </div>
+</div>
+<script src="Main.js"></script>
+<footer>
+  © 2025 Erfan Yousefi — All Rights Reserved
+</footer>
 </body>
 </html>
